@@ -22,7 +22,7 @@ group :development do
 end
 
 group :test do 
-	gem 'factory_girl'
+	gem 'factory_girl_rails'
 	gem 'rspec-rails'
 end
 
