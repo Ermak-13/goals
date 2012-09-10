@@ -1,6 +1,6 @@
 Goals::Application.routes.draw do
-  root :to => 'users#index'
-  resources :users
+  root :to => 'profiles#index'
+  resources :profiles
 
   devise_for :users
   devise_scope :user do

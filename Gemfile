@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
+gem 'slim'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
