@@ -1,0 +1,8 @@
+<div class="well">
+	<h2>Resend confirmation instructions</h2>
+	<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name),
+			html: { method: 'post', class: 'form-horizontal' }) do |f| %>
+		<%= f.input :email %>
+		<%= f.button :submit, 'Resend confirmation instructions' %>
+	<% end %>
+</div>

@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,12 +16,14 @@ end
 
 group :development do
 	gem 'pry'
+	gem 'sextant'
+
 	gem 'rspec-rails'
 end
 
 group :test do 
-	gem 'rspec-rails'
 	gem 'factory_girl'
+	gem 'rspec-rails'
 end
 
 group :production do
