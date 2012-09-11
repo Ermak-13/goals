@@ -12,7 +12,8 @@ html lang="en"
       script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"
     /[endif]
     == stylesheet_link_tag "application", :media => "all"
-  body
+    
+  body class="#{params[:action]} #{params[:controller]}"
 
     == render 'common/navigation'
 
@@ -22,4 +23,5 @@ html lang="en"
           == alert!
           == yield
 
+    == render 'common/templates'
     == javascript_include_tag "application"

@@ -1,0 +1,10 @@
+table.table.table-bordered.table-hover#interests-container
+	thead
+		tr
+			th.name Name
+			th.actions Actions
+	tbody
+	- @user.interests.each do |interest|
+		tr
+			td == interest.name
+			td: a.btn.btn-danger Remove

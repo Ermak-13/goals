@@ -1,5 +1,14 @@
-| welcom, 
-== @user.email
-
-- @user.interests.each do |interest|
-	p == interest.name 
+table.table.table-bordered.table-hover#interests-container
+	thead
+		tr
+			th.name Name
+			th.actions Actions
+	tbody
+		tr
+			td: input.interest-name
+			td: a.btn.btn-success#add-interest Add
+	- @user.interests.each do |interest|
+		tr id="interest-#{interest.id}"
+			td == interest.name
+			td 
+				a.btn.btn-danger.remove-interest href="#interest-#{interest.id}" data-id="#{interest.id}" Remove
