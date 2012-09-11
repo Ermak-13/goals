@@ -12,4 +12,8 @@ module ApplicationHelper
 			button + message
 		end
 	end
+
+	def data_source(interests, column)
+		interests.map(&column).to_json
+	end
 end

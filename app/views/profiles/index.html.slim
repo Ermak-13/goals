@@ -5,10 +5,13 @@ table.table.table-bordered.table-hover#interests-container
 			th.actions Actions
 	tbody
 		tr
-			td: input.interest-name
+			td
+				input[class="interest-name" data-provide="typeahead" data-items="7" 
+					data-source="#{data_source(@interests, :name)}"]
 			td: a.btn.btn-success#add-interest Add
 	- @user.interests.each do |interest|
 		tr id="interest-#{interest.id}"
 			td == interest.name
 			td 
-				a.btn.btn-danger.remove-interest href="#interest-#{interest.id}" data-id="#{interest.id}" Remove
+				a[class="btn btn-danger remove-interest" href="#interest-#{interest.id}" 
+					data-id="#{interest.id}"] Remove
