@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910002310) do
+ActiveRecord::Schema.define(:version => 20120911130929) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "receiver_id"
+    t.integer  "sender_id"
+    t.string   "message"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "interests", :force => true do |t|
     t.string   "name"
