@@ -5,4 +5,9 @@
 		== f.input :message, as: 'text', label: false
 		== f.button :submit, 'Comment'  
 
-	== render partial: 'comments/comment', collection: comments
+	- comments.each do |comment|
+		.comment
+			.sender 
+				strong Sender 
+				== comment.sender.email
+			p.message == comment.message
