@@ -1,12 +1,8 @@
 #comments-container.span8
-	== simple_form_for :comment, url: comments_path, html: { class: 'form-inline form-comment' } do |f|
+	== simple_form_for :comment, url: comments_path, remote: true, \
+		html: { class: 'form-inline form-comment' } do |f|
 		== f.input :receiver_id, as: 'hidden', input_html: { value: @user.id }	
 		== f.input :message, as: 'text', label: false
 		== f.button :submit, 'Comment'  
 
-	- comments.each do |comment|
-		.comment
-			.sender 
-				strong Sender 
-				== comment.sender.email
-			p.message == comment.message
+	== render partial: 'comments/comment', collection: comments
