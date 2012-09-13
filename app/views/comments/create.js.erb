@@ -1,3 +1,4 @@
-$('#comments-container').append("<%= escape_javascript \
-	render(partial: 'comments/comment', object: @comment) %>")
-
+<% broadcast "/comments/new" do %>
+	$('#comments-container').append("<%= escape_javascript \
+		render(partial: 'comments/comment', object: @comment) %>")
+<% end %>
