@@ -2,4 +2,4 @@
 	- @user.interests.each do |interest|
 		.interest-name == interest.name
 
-== render partial: 'comments', object: @user.received_comments
+== render partial: 'comments/container', locals: { comments: @user.received_comments }

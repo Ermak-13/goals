@@ -16,4 +16,4 @@ table.table.table-bordered.table-hover#interests-container.span4
 				a[class="btn btn-danger remove-interest" href="#interest-#{interest.id}" 
 					data-id="#{interest.id}"] Remove
 
-== render partial: 'comments', object: @user.received_comments
+== render partial: 'comments/container', locals: { comments: @user.received_comments }
