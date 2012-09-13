@@ -1,4 +1,4 @@
-.profiles.index {
+body.profiles {
 	#comments-container {
 
 		form.form-comment {
@@ -15,5 +15,17 @@
 
 			.message { font-size: 18px; }
 		}
+	}
+}
+
+body.profiles.show {
+	.interest-name {
+		background: #1a1a1a;
+		border-radius: 5px;
+		color: white;
+		float: left;
+		font-size: 18px;
+		margin: 5px;
+		padding: 5px;
 	}
 }
